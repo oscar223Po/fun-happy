@@ -1,0 +1,37 @@
+// ========================================================================================================================================================
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+.button {
+	display: inline-flex;
+	padding: 0px 0px;
+	font-weight: 700;
+	align-items: center;
+	letter-spacing: 0.1em;
+	justify-content: center;
+	border-radius: toRem(15);
+	text-transform: uppercase;
+	box-shadow: toRem(0) toRem(0) toRem(20) toRem(0) #f90;
+	box-shadow: toRem(0) toRem(4) toRem(0) toRem(0) #be7200;
+	background: linear-gradient(180deg, #eb8d00 0%, #eeac49 100%),
+		radial-gradient(50% 49.28% at 50% 0%, rgb(255, 255, 255) 0%, rgb(205, 127, 55) 100%);
+	@media (any-hover: hover) {
+		&:hover {
+			background: linear-gradient(0deg, #eb8d00 0%, #eeac49 100%),
+				radial-gradient(50% 49.28% at 50% 0%, rgb(255, 255, 255) 0%, rgb(205, 127, 55) 100%);
+		}
+	}
+	&--big {
+		font-size: toRem(24);
+		min-height: toRem(69);
+		padding: toRem(0) toRem(75);
+		@media (max-width: $tablet) {
+			font-size: toRem(20);
+			min-height: toRem(50);
+			padding: toRem(0) toRem(45);
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}
+// ========================================================================================================================================================
