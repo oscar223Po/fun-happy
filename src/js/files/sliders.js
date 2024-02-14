@@ -169,7 +169,7 @@ function initSliders() {
 		new Swiper('.gallery__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, EffectFade, Autoplay],
+			modules: [EffectFade, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,

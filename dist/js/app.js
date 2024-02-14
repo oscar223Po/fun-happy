@@ -3616,7 +3616,7 @@
             on: {}
         });
         if (document.querySelector(".gallery__slider")) new swiper_core_Swiper(".gallery__slider", {
-            modules: [ Navigation, EffectFade, Autoplay ],
+            modules: [ EffectFade, Autoplay ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
