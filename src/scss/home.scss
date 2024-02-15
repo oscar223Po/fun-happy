@@ -844,7 +844,7 @@
 		display: grid;
 		justify-items: center;
 		@include adaptiveValue("padding-top", 130, 40);
-		@include adaptiveValue("padding-bottom", 130, 40);
+		@include adaptiveValue("padding-bottom", 130, 80);
 	}
 
 	&__items {
@@ -1194,7 +1194,7 @@
 .footer-again {
 	background-color: #0a4088;
 	@include adaptiveValue("padding-top", 130, 35);
-	@include adaptiveValue("padding-bottom", 130, 35);
+	@include adaptiveValue("padding-bottom", 130, 80);
 	&__container {
 		display: flex;
 		align-items: center;
