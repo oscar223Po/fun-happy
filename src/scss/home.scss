@@ -396,7 +396,9 @@
 		position: relative;
 		align-items: center;
 		flex-direction: column;
+		padding-top: toRem(40);
 		justify-content: center;
+		padding-bottom: toRem(40);
 		&::before,
 		&::after {
 			content: "";
@@ -423,14 +425,8 @@
 				left: toRem(15);
 				bottom: toRem(15);
 			}
-			@media (max-width: $mobile) {
-				bottom: toRem(110);
-			}
 		}
 		@media (max-width: $mobile) {
-			padding-top: toRem(40);
-			padding-bottom: toRem(40);
-			justify-content: space-between;
 			&::before,
 			&::after {
 				width: toRem(85);
@@ -458,7 +454,7 @@
 		@media (max-width: $mobile) {
 			max-width: toRem(115);
 			&:not(:last-child) {
-				margin-bottom: toRem(20);
+				margin-bottom: toRem(30);
 			}
 		}
 	}
@@ -473,7 +469,7 @@
 	&__body {
 		width: 100%;
 		&:not(:last-child) {
-			margin-bottom: toRem(80);
+			@include adaptiveValue("margin-bottom", 80, 55);
 		}
 	}
 
@@ -1132,14 +1128,11 @@
 	}
 
 	&__map {
-		img {
+		height: 100%;
+		margin-bottom: toRem(-4);
+		iframe {
 			width: 100%;
-			object-fit: cover;
-		}
-		@media (max-width: $mobile) {
-			img {
-				height: toRem(400);
-			}
+			@include adaptiveValue("height", 670, 350);
 		}
 	}
 }
@@ -1263,18 +1256,22 @@
 }
 //========================================================================================================================================================
 // Video
-/*
-.video {
-	width: 100%;
-	height: 100vh;
+.video-container {
+	margin: auto;
+	top: toRem(0);
 	display: flex;
+	left: toRem(0);
+	right: toRem(0);
 	position: fixed;
-	flex-wrap: wrap;
-	object-fit: cover;
+	bottom: toRem(0);
 	align-items: center;
 	pointer-events: none;
 	flex-direction: column;
 	justify-content: center;
 }
-*/
+.video {
+	height: 100vh;
+	object-fit: cover;
+	width: toRem(2700);
+}
 //========================================================================================================================================================

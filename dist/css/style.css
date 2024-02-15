@@ -1048,9 +1048,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 2.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 2.5rem;
 }
 
 .date__container::before,
@@ -1120,10 +1122,6 @@ body {
 
 .date__body {
   width: 100%;
-}
-
-.date__body:not(:last-child) {
-  margin-bottom: 5rem;
 }
 
 .date__title {
@@ -1611,10 +1609,13 @@ body {
   text-decoration: underline;
 }
 
-.main-history__map img {
+.main-history__map {
+  height: 100%;
+  margin-bottom: -0.25rem;
+}
+
+.main-history__map iframe {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .again__hero {
@@ -1686,20 +1687,35 @@ body {
   margin-bottom: 0.3125rem;
 }
 
-/*
-.video {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	position: fixed;
-	flex-wrap: wrap;
-	object-fit: cover;
-	align-items: center;
-	pointer-events: none;
-	flex-direction: column;
-	justify-content: center;
+.video-container {
+  margin: auto;
+  top: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0rem;
+  right: 0rem;
+  position: fixed;
+  bottom: 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-*/
+
+.video {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 168.75rem;
+}
 
 .swiper {
   overflow: hidden;
@@ -1872,6 +1888,10 @@ body {
 
   .date__content {
     max-width: 50.3125rem;
+  }
+
+  .date__body:not(:last-child) {
+    margin-bottom: 5rem;
   }
 
   .date__title {
@@ -2058,6 +2078,10 @@ body {
     font-size: 1.5rem;
   }
 
+  .main-history__map iframe {
+    height: 41.875rem;
+  }
+
   .footer-again {
     padding-top: 8.125rem;
   }
@@ -2126,6 +2150,10 @@ body {
 
   .date__content {
     max-width: 15.625rem;
+  }
+
+  .date__body:not(:last-child) {
+    margin-bottom: 3.4375rem;
   }
 
   .date__title {
@@ -2294,6 +2322,10 @@ body {
 
   .main-history__link {
     font-size: 0.875rem;
+  }
+
+  .main-history__map iframe {
+    height: 21.875rem;
   }
 
   .footer-again {
@@ -2493,18 +2525,6 @@ body {
     right: -6.25rem;
   }
 
-  .date__container::after {
-    bottom: 6.875rem;
-  }
-
-  .date__container {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .date__container::before,
   .date__container::after {
     width: 5.3125rem;
@@ -2516,7 +2536,7 @@ body {
   }
 
   .date__circle:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.875rem;
   }
 
   .date__title span {
@@ -2625,10 +2645,6 @@ body {
 
   .main-history__logo {
     max-width: 4.0625rem;
-  }
-
-  .main-history__map img {
-    height: 25rem;
   }
 
   .footer-again__container {
@@ -2858,6 +2874,18 @@ body {
 @supports not (max-width: clamp( 15.625rem , 3.4271978022rem  +  60.989010989vw , 50.3125rem )) {
     .date__content {
       max-width: calc(15.625rem + 34.6875 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 3.4375rem , 2.8880494505rem  +  2.7472527473vw , 5rem )) {
+    .date__body:not(:last-child) {
+      margin-bottom: clamp( 3.4375rem , 2.8880494505rem  +  2.7472527473vw , 5rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 3.4375rem , 2.8880494505rem  +  2.7472527473vw , 5rem )) {
+    .date__body:not(:last-child) {
+      margin-bottom: calc(3.4375rem + 1.5625 * (100vw - 20rem) / 56.875);
     }
 }
 
@@ -3362,6 +3390,18 @@ body {
 @supports not (font-size: clamp( 0.875rem , 0.6552197802rem  +  1.0989010989vw , 1.5rem )) {
     .main-history__link {
       font-size: calc(0.875rem + 0.625 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (height: clamp( 21.875rem , 14.842032967rem  +  35.1648351648vw , 41.875rem )) {
+    .main-history__map iframe {
+      height: clamp( 21.875rem , 14.842032967rem  +  35.1648351648vw , 41.875rem );
+    }
+}
+
+@supports not (height: clamp( 21.875rem , 14.842032967rem  +  35.1648351648vw , 41.875rem )) {
+    .main-history__map iframe {
+      height: calc(21.875rem + 20 * (100vw - 20rem) / 56.875);
     }
 }
 
