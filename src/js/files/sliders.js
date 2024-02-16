@@ -169,7 +169,7 @@ function initSliders() {
 		new Swiper('.gallery__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [EffectFade, Autoplay],
+			modules: [Navigation, EffectFade, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -187,7 +187,7 @@ function initSliders() {
 			// Ефекти
 			effect: 'fade',
 			autoplay: {
-				delay: 1200,
+				delay: 3000,
 				disableOnInteraction: false,
 			},
 
@@ -207,13 +207,11 @@ function initSliders() {
 			},
 			*/
 
-			/*
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.main-history__arrow--prew',
-				nextEl: '.main-history__arrow--next',
+				prevEl: '.gallery__arrow--prew',
+				nextEl: '.gallery__arrow--next',
 			},
-			*/
 
 			/*
 			// Брейкпоінти
