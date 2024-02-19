@@ -33,7 +33,7 @@ function initSliders() {
 		new Swiper('.gallery-gest__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 5,
@@ -48,14 +48,12 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Ефекти
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
 
 			// Пагінація
 			/*
@@ -100,7 +98,7 @@ function initSliders() {
 		new Swiper('.main-history__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -111,18 +109,16 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			// loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Ефекти
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
-				delay: 3000,
+				delay: 2400,
 				disableOnInteraction: false,
 			},
-			*/
 
 			// Пагінація
 			/*
@@ -180,14 +176,14 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			// loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
 			// Ефекти
 			effect: 'fade',
 			autoplay: {
-				delay: 3000,
+				delay: 2400,
 				disableOnInteraction: false,
 			},
 

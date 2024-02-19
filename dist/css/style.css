@@ -1387,10 +1387,9 @@ body {
   padding-bottom: 1.875rem;
 }
 
-.gallery__slider {
+.gallery__main {
   width: 100%;
   position: relative;
-  border-radius: 1.25rem;
 }
 
 .gallery__slide {
@@ -1399,8 +1398,6 @@ body {
 
 .gallery__slide img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .gallery__arrowns {
@@ -1826,15 +1823,6 @@ body {
   display: none !important;
 }
 
-@media (min-width: 29.99875em) {
-  .gallery__arrowns {
-    top: 50%;
-    -webkit-transform: translate(0px, -50%);
-        -ms-transform: translate(0px, -50%);
-            transform: translate(0px, -50%);
-  }
-}
-
 @media (min-width: 47.99875em) {
   .main-why__item--min p {
     max-width: 22.5rem;
@@ -1854,6 +1842,13 @@ body {
 
   .main-why__item:nth-child(4) {
     padding-left: 5.9375rem;
+  }
+
+  .gallery__arrowns {
+    top: 50%;
+    -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
   }
 
   .artist__item:nth-child(2n) {
@@ -2022,6 +2017,10 @@ body {
 
   .top-gest__text {
     font-size: 1.25rem;
+  }
+
+  .gallery__slider {
+    border-radius: 1.25rem;
   }
 
   .artist__container {
@@ -2260,6 +2259,10 @@ body {
 
   .top-gest__text {
     font-size: 0.75rem;
+  }
+
+  .gallery__slider {
+    border-radius: 0.3125rem;
   }
 
   .artist__container {
@@ -2677,8 +2680,12 @@ body {
         flex-basis: 100%;
   }
 
-  .gallery__slide img {
-    height: 34.375rem;
+  .gallery__arrowns {
+    gap: 0.9375rem;
+    bottom: -4.375rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .artist__item {
@@ -2833,11 +2840,14 @@ body {
   }
 
   .gallery__arrowns {
-    gap: 1.875rem;
-    bottom: 0.625rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    gap: 0.75rem;
+    bottom: -3.125rem;
+  }
+
+  .gallery__arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -3115,6 +3125,18 @@ body {
 @supports not (font-size: clamp( 0.75rem , 0.5741758242rem  +  0.8791208791vw , 1.25rem )) {
     .top-gest__text {
       font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (border-radius: clamp( 0.3125rem , -0.0171703297rem  +  1.6483516484vw , 1.25rem )) {
+    .gallery__slider {
+      border-radius: clamp( 0.3125rem , -0.0171703297rem  +  1.6483516484vw , 1.25rem );
+    }
+}
+
+@supports not (border-radius: clamp( 0.3125rem , -0.0171703297rem  +  1.6483516484vw , 1.25rem )) {
+    .gallery__slider {
+      border-radius: calc(0.3125rem + 0.9375 * (100vw - 20rem) / 56.875);
     }
 }
 
